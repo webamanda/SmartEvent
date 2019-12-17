@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Registre-se
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+
+<ion-content>
+    <form  #form="ngForm" >
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div class="ion-text-center">
+                  <div class="ion-text-center">
+                      <img src="assets/icon/event.png"/>
+                      <h3></h3>
+                  </div>
+                <h3>Criar uma conta</h3>
+              </div>
+              <div padding>
+                <ion-item>
+                  <ion-input  name="name" type="text" placeholder="Seu nome" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="email" type="email" placeholder="seu@email.com" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="password" type="password" placeholder="Senha" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="confirm" type="password" placeholder="Confirmar senha" ngModel required></ion-input>
+                </ion-item>
+              </div>
+              <div padding>
+                <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Registrar</ion-button>
+              </div>
+              <div class="ion-text-center">
+                  Já possui conta? Faça o <a routerLink='/login'>
+                  Login</a> primeiro!
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+</ion-content>
